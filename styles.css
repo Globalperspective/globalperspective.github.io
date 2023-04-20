@@ -18,29 +18,65 @@ h1 {
 /* Container */
 .container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+/* Sidebars */
+.sidebar-left, .sidebar-right {
+  flex: 1;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  padding: 20px;
 }
 
 /* Karte */
 #map {
-  width: 80%;
-  height: 80%;
+  flex: 4;
+  height: 100%;
   border: 3px solid #607d8b;
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Schaltfläche zum Umschalten der Basiskarte */
+#toggle-basemap {
+  font-size: 1em;
+  padding: 10px 20px;
+  background-color: #607d8b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#toggle-basemap:hover {
+  background-color: #455a64;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 2em;
+    font-size: 1.5em;
+  }
+
+  .container {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .sidebar-left, .sidebar-right {
+    flex: none;
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   #map {
-    width: 95%;
+    width: 100%;
     height: 60%;
   }
 }

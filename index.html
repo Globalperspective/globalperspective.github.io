@@ -2,20 +2,32 @@
 <html>
   <head>
     <title>GlobalPerspective</title>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </head>
   <body>
     <h1>Willkommen bei GlobalPerspective</h1>
-	<div id="map" style="width: 100%; height: 600px;"></div>
-	<script>
-  var map = L.map('map').setView([51.505, -0.09], 13);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-</script>
+    <div class="container">
+      <div class="sidebar-left">
+        <button id="toggle-basemap">Satellit/OSM</button>
+        <div id="layer-controls">
+          <!-- Hier können Sie weitere Layer-Steuerungen hinzufügen -->
+        </div>
+      </div>
+      <div id="map"></div>
+      <div class="sidebar-right">
+        <div id="layer-info">
+          <h2 id="layer-name">Layername</h2>
+          <div id="layer-legend">
+            <!-- Hier können Sie die Legende für den aktuellen Layer hinzufügen -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // JavaScript-Code für die Karteninitialisierung und Layer-Steuerung
+    </script>
   </body>
 </html>
