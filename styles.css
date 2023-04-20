@@ -21,7 +21,7 @@ h1 {
 /* Container */
 .container {
   display: flex;
-  height: 80%;
+  height: 60%;
 }
 
 /* Sidebars */
@@ -32,15 +32,16 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(76, 175, 80, 0.8);
   border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Karte */
 #map {
   flex: 4;
   height: 100%;
-  border: 3px solid #607d8b;
+  border: 3px solid #4caf50;
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   margin: 0 20px;
@@ -50,7 +51,20 @@ h1 {
 #toggle-basemap {
   font-size: 1em;
   padding: 10px 20px;
-  background-color: #607d8b;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: none;
+}
+
+/* Dropdown-Menü für die Kartenwahl */
+#map-select {
+  font-size: 1em;
+  padding: 10px 20px;
+  background-color: #4caf50;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -58,8 +72,8 @@ h1 {
   margin-bottom: 20px;
 }
 
-#toggle-basemap:hover {
-  background-color: #455a64;
+#map-select:hover {
+  background-color: #388e3c;
 }
 
 /* Responsive Design */
