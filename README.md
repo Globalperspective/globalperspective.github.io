@@ -1,1 +1,0 @@
-# globalperspective.github.io
